@@ -1,0 +1,39 @@
+.dashboard-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .grid-container {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+  }
+  .dashboard-title-container{
+    display: flex;
+    gap:10px;
+    align-items: center;
+  }
+.grid-item {
+    display: flex
+;
+    gap: 20px;
+    flex-direction: column;
+}
+table{
+    width: 100%;
+}
+.dashboard-title{
+    margin-bottom: 0px;
+}
+.w-20{
+    width: 50%;
+}
+.w-50{
+    width: 70%;
+}

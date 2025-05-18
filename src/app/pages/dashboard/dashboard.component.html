@@ -1,0 +1,40 @@
+<div class="dashboard-container">
+    <h1 class="dashboard-title">Dashboard</h1>
+    <div class="grid-container">
+        <!-- <div class="grid-item">
+            <mat-card class="card">
+                <mat-card-title class="dashboard-title-container"><mat-icon class="icon">dashboard</mat-icon>Welcome to the Dashboard</mat-card-title>
+                <mat-card-content>
+                    <p>Here you can find an overview of your portfolio and market trends.</p>
+                </mat-card-content>
+            </mat-card>
+        </div> -->
+        <div class="grid-item">
+            <app-info-tile [tileInfo]="totalInvestmentTail"> </app-info-tile>
+        </div>
+        <div class="grid-item">
+            <app-info-tile [tileInfo]="todayInvestmentTail"> </app-info-tile>
+        </div>
+        <div class="grid-item">
+            <app-info-tile [tileInfo]="recentPurchaseStock"> </app-info-tile>
+        </div>
+        <div class="grid-item">
+            <app-info-tile [tileInfo]="recentPurchaseto"> </app-info-tile>
+        </div>
+        
+    </div>
+    <div class="grid-container">
+<div class="grid-item w-20">
+    <app-asset-allocation></app-asset-allocation>
+</div>
+      
+  <div class="grid-item w-20">
+    <app-market-trend></app-market-trend>
+      <app-performance-metrics></app-performance-metrics>
+  </div>
+      
+    
+  </div>
+  <div class="grid-item">
+    <app-recent-expenses>  </app-recent-expenses>
+  </div>

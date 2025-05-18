@@ -1,0 +1,61 @@
+<mat-card>
+    <mat-card-title>Recent Expenses 
+        <button mat-raised-button color="primary" (click)="openAddInvestmentModal()">
+        <mat-icon>receipt_long</mat-icon> Add Expense
+      </button>
+    </mat-card-title>
+    <div class="" *ngIf="investments.length > 0">
+        <table mat-table [dataSource]="recentExpensesTableSource">
+  
+            <ng-container matColumnDef="sno">
+                <th mat-header-cell *matHeaderCellDef> S.No </th>
+                <td mat-cell *matCellDef="let element;let index=index"> {{index+1}} </td>
+              </ng-container>
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Date </th>
+              <td mat-cell *matCellDef="let element;let index=index"> {{element.date | date:'medium'}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="assetType">
+              <th mat-header-cell *matHeaderCellDef> Asset Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.assetType}} </td>
+            </ng-container>
+            <ng-container matColumnDef="assetName">
+                <th mat-header-cell *matHeaderCellDef> Asset Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.assetName}} </td>
+              </ng-container>
+            
+            <ng-container matColumnDef="price">
+              <th mat-header-cell *matHeaderCellDef> Price </th>
+              <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="quantity">
+              <th mat-header-cell *matHeaderCellDef> Quantity </th>
+              <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+            </ng-container>
+            <ng-container matColumnDef="edit">
+                <th mat-header-cell *matHeaderCellDef>  </th>
+                <td mat-cell *matCellDef="let element">  
+                    <div class="button-container">
+                        <button mat-raised-button color="primary" (click)="openAddInvestmentModal(true,element)">
+                            <mat-icon>edit</mat-icon> Edit
+                        </button>
+                        <button mat-raised-button color="warn" (click)="deleteInvestment(element)">
+                            <mat-icon>delete</mat-icon> Delete
+                        </button>
+                    </div>
+                   
+                </td>
+              </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                         showFirstLastButtons 
+                         aria-label="Select page of periodic elements">
+          </mat-paginator>
+    </div>
+   
+</mat-card>

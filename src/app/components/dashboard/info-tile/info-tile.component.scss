@@ -1,0 +1,29 @@
+
+.tile-container-title {
+    display: flex
+;
+    gap: 40px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.tile-content {
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    .title{
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .content{
+        font-size: 16px;
+        font-weight: 400;
+        color: rgb(182, 93, 254);
+        font-weight: 700;
+        font-family: "Sansation", sans-serif;
+        // text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+}

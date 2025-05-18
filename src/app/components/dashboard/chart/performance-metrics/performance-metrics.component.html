@@ -1,0 +1,9 @@
+<mat-card class="card">
+    <mat-card-title>Performance Metrics</mat-card-title>
+    <canvas baseChart
+            [data]="performanceData"
+            [labels]="performanceLabels"
+            [type]="'line'"
+            [options]="chartOptions">
+    </canvas>
+  </mat-card>

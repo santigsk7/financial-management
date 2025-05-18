@@ -1,0 +1,10 @@
+
+        <mat-card class="card">
+            <mat-card-title>Asset Allocation</mat-card-title>
+                <canvas baseChart
+                        [data]="assetAllocationData"
+                        [labels]="assetAllocationLabels"
+                        [type]="'pie'"
+                        [options]="chartOptions">
+                </canvas>
+        </mat-card>
